@@ -1,4 +1,3 @@
-
 -- 
 local function createLuckyTea(mc)
 	STRINGS.NAMES[string.upper(mc)] = "幸运红茶"
@@ -22,9 +21,16 @@ local function createLuckyTea(mc)
 
         -- 可食用
         inst:AddComponent("edible")
-	    inst.components.edible.healthvalue = 10
-	    inst.components.edible.hungervalue = 10
-	    inst.components.edible.sanityvalue = 60
+	    inst.components.edible.healthvalue = 15
+	    inst.components.edible.hungervalue = 15
+	    inst.components.edible.sanityvalue = 15
+
+        inst.components.edible:SetOnEatenFn(function (inst, eater)
+            eater.components.locomotor:SetExternalSpeedMultiplier(eater, mc .. "buff", 1.20)
+            eater:DoTaskInTime(30, function()
+                eater.components.locomotor:RemoveExternalSpeedMultiplier(eater,  mc .. "buff")
+            end)
+        end)
 
         -- 堆积
         inst:AddComponent("stackable")

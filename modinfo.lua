@@ -1,9 +1,9 @@
 -- mode
 
 name = "魔女的茶会"
-description = "娱乐模组, v0.0.1"
+description = "娱乐模组, v0.0.2"
 author = "arrebole"
-version = "0.0.1"
+version = "0.0.2"
 forumthread = "/"
 
 api_version = 10

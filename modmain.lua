@@ -25,9 +25,10 @@ local makeLuckyTea =
 	cookbook_tex = "lucky_tea.tex",
 	cookbook_atlas = "images/inventoryimages/lucky_tea.xml",
 	cookbook_category = "cookpot",
-	oneat_desc = "无",
+	oneat_desc = "加速 20%",
 }
 
+AddIngredientValues({ "robin" }, { meat = 1 }, { trunk = 1 }, true)
 AddCookerRecipe("cookpot", makeLuckyTea)
 
 -- 注册西瓜啵啵制作方式
@@ -40,9 +41,9 @@ local makeWatermelonBobo =
 	foodtype = FOODTYPE.VEGGIE,
 	perishtime = TUNING.PERISH_MED,--腐烂时间
 	priority = 100,
-	health = 15,
-	hunger = 15,
-	sanity = 15,
+	health = 10,
+	hunger = 10,
+	sanity = 60,
 	weight = 1,
 	cooktime = 0.3,
 
