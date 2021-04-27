@@ -3,7 +3,7 @@
 name = "茶会"
 description = "饥荒饮品模组"
 author = "arrebole"
-version = "0.0.2"
+version = "0.0.3"
 forumthread = "/"
 
 api_version = 10
