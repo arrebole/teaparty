@@ -1,7 +1,7 @@
 -- mode
 
-name = "魔女的茶会"
-description = "娱乐模组, v0.0.2"
+name = "茶会"
+description = "饥荒饮品模组"
 author = "arrebole"
 version = "0.0.2"
 forumthread = "/"

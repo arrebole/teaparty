@@ -26,7 +26,7 @@ local function createLuckyTea(mc)
 	    inst.components.edible.sanityvalue = 15
 
         inst.components.edible:SetOnEatenFn(function (inst, eater)
-            eater.components.locomotor:SetExternalSpeedMultiplier(eater, mc .. "buff", 1.20)
+            eater.components.locomotor:SetExternalSpeedMultiplier(eater, mc .. "buff", 1.80)
             eater:DoTaskInTime(30, function()
                 eater.components.locomotor:RemoveExternalSpeedMultiplier(eater,  mc .. "buff")
             end)
