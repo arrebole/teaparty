@@ -4,7 +4,6 @@ GLOBAL.setmetatable(env,{__index=function(t,k) return GLOBAL.rawget(GLOBAL,k) en
 PrefabFiles = {
     "lucky_tea",
 	"watermelon_bobo",
-	"liaoli",
 }
 
 -- 注册幸运红茶制作方式
@@ -54,29 +53,3 @@ local makeWatermelonBobo =
 }
 
 AddCookerRecipe("cookpot", makeWatermelonBobo)
-
-local pf = {
-	name = "ll",
-	test = function(cooker, names, tags)
-		return names.honey
-		and names.berries_juicy
-		and names.ice
-		and names.ice
-	end,
-	priority = 30,
-	weight = 1,
-	foodtype = FOODTYPE.MEAT,
-	health = 36,
-	hunger = 36,
-	sanity = 36,
-
-	perishtime = TUNING.PERISH_MED,--腐烂时间
-	cooktime = 0.1,--烹饪时间
-
-	cookbook_tex = "ll.tex",
-	cookbook_atlas = "images/inventoryimages/ll.xml",
-	cookbook_category = "cookpot",
-	oneat_desc = "无",
-}
-
-AddCookerRecipe("cookpot", pf)
