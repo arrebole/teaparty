@@ -14,7 +14,7 @@ local makeLuckyTea =
 		return names.robin and names.ice and names.honey == 2 
 	end,
 	foodtype = FOODTYPE.VEGGIE,
-	perishtime = TUNING.PERISH_MED,--腐烂时间
+	perishtime = TUNING.PERISH_MED, --腐烂时间
 	priority = 100,
 	health = 15,
 	hunger = 15,
@@ -39,11 +39,11 @@ local makeWatermelonBobo =
 		return names.watermelon and names.ice and names.honey and names.berries_juicy 
 	end,
 	foodtype = FOODTYPE.VEGGIE,
-	perishtime = TUNING.PERISH_MED,--腐烂时间
+	perishtime = TUNING.PERISH_MED, --腐烂时间
 	priority = 100,
 	health = 10,
 	hunger = 10,
-	sanity = 60,
+	sanity = 30,
 	weight = 1,
 	cooktime = 0.3,
 
