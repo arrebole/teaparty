@@ -2,55 +2,80 @@ GLOBAL.setmetatable(env,{__index=function(t,k) return GLOBAL.rawget(GLOBAL,k) en
 
 -- mode 增加的物品文件，scripts/prefabs 下的文件名
 PrefabFiles = {
-    "lucky_tea",
-	"watermelon_bobo",
+    "ice_honey_black_tea",
+	"watermelon_bo",
+	"fruit_skewers",
 }
 
--- 注册幸运红茶制作方式
-local makeLuckyTea =
+-- 注册冰蜜红茶制作方式
+local makeIceHoneyBlackTea =
 {
-	name = "lucky_tea",
+	name = "ice_honey_black_tea",
 	test = function(cooker, names, tags) 
-		return names.robin and names.ice and names.honey == 2 
+		return names.robin and names.ice == 2 and names.honey 
 	end,
 	foodtype = FOODTYPE.VEGGIE,
-	perishtime = TUNING.PERISH_MED, --腐烂时间
+	perishtime = TUNING.PERISH_FAST / 4, --腐烂时间
 	priority = 100,
 	health = 15,
 	hunger = 15,
 	sanity = 15,
 	weight = 1,
-	cooktime = 0.3,
+	cooktime = 0.25,
 
-	cookbook_tex = "lucky_tea.tex",
-	cookbook_atlas = "images/inventoryimages/lucky_tea.xml",
+	cookbook_tex = "ice_honey_black_tea.tex",
+	cookbook_atlas = "images/inventoryimages/ice_honey_black_tea.xml",
 	cookbook_category = "cookpot",
 	oneat_desc = "加速 20%",
 }
 
-AddIngredientValues({ "robin" }, { meat = 1 }, { trunk = 1 }, true)
-AddCookerRecipe("cookpot", makeLuckyTea)
+AddIngredientValues({ "robin" }, { meat = 1 }, true)
+AddCookerRecipe("cookpot", makeIceHoneyBlackTea)
 
--- 注册西瓜啵啵制作方式
-local makeWatermelonBobo =
+-- 注册西瓜啵制作方式
+local makeWatermelonBo =
 {
-	name = "watermelon_bobo",
+	name = "watermelon_bo",
 	test = function(cooker, names, tags) 
-		return names.watermelon and names.ice and names.honey and names.berries_juicy 
+		return names.watermelon and names.ice and names.honey and names.ice_honey_black_tea
 	end,
 	foodtype = FOODTYPE.VEGGIE,
-	perishtime = TUNING.PERISH_MED, --腐烂时间
+	perishtime = TUNING.PERISH_FAST / 4, --腐烂时间
 	priority = 100,
 	health = 10,
 	hunger = 10,
 	sanity = 30,
 	weight = 1,
-	cooktime = 0.3,
+	cooktime = 0.25,
 
-	cookbook_tex = "watermelon_bobo.tex",
-	cookbook_atlas = "images/inventoryimages/watermelon_bobo.xml",
+	cookbook_tex = "watermelon_bo.tex",
+	cookbook_atlas = "images/inventoryimages/watermelon_bo.xml",
+	cookbook_category = "cookpot",
+	oneat_desc = "加速30%，持续5分钟",
+}
+AddIngredientValues({ "ice_honey_black_tea" }, { fruit = 1 }, true)
+AddCookerRecipe("cookpot", makeWatermelonBo)
+
+-- 注册果串零食制作方式
+local makeFruitSkewers =
+{
+	name = "fruit_skewers",
+	test = function(cooker, names, tags) 
+		return names.twigs and names.jammypreserves == 3
+	end,
+	foodtype = FOODTYPE.VEGGIE,
+	perishtime = TUNING.PERISH_FAST/6, --腐烂时间
+	priority = 100,
+	hunger = 10,
+	health = 20,
+	sanity = 20,
+	weight = 1,
+	cooktime = 0.25,
+
+	cookbook_tex = "fruit_skewers.tex",
+	cookbook_atlas = "images/inventoryimages/fruit_skewers.xml",
 	cookbook_category = "cookpot",
 	oneat_desc = "无",
 }
-
-AddCookerRecipe("cookpot", makeWatermelonBobo)
+AddIngredientValues({ "jammypreserves" }, { fruit = 2 }, true)
+AddCookerRecipe("cookpot", makeFruitSkewers)

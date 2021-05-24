@@ -1,9 +1,9 @@
 -- mode
 
 name = "茶会"
-description = "饥荒饮品模组"
+description = "饥荒茶会模组"
 author = "arrebole"
-version = "0.0.4"
+version = "0.2.0"
 forumthread = "/"
 
 api_version = 10

@@ -1,6 +1,6 @@
 -- 
-local function createWatermelonBobo(mc)
-	STRINGS.NAMES[string.upper(mc)] = "秘制西瓜啵啵"
+local function create(mc)
+	STRINGS.NAMES[string.upper(mc)] = "西瓜啵"
     STRINGS.CHARACTERS.WILLOW.DESCRIBE[string.upper(mc)] = "ohhh~"
     STRINGS.CHARACTERS.WOLFGANG.DESCRIBE[string.upper(mc)] = "ohhh~"
     STRINGS.CHARACTERS.WENDY.DESCRIBE[string.upper(mc)] = "ohhh~"
@@ -17,8 +17,8 @@ local function createWatermelonBobo(mc)
 
         MakeInventoryPhysics(inst)
 	
-        inst.AnimState:SetBank(mc)
         inst.AnimState:SetBuild(mc)
+        inst.AnimState:SetBank("entity_" .. mc)
         inst.AnimState:PlayAnimation("idle")
 
         -- 可食用
@@ -29,7 +29,7 @@ local function createWatermelonBobo(mc)
 
         -- 腐烂
         inst:AddComponent("perishable")
-	    inst.components.perishable:SetPerishTime(TUNING.PERISH_MED)
+	    inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST / 4)
 	    inst.components.perishable:StartPerishing()
 	    inst.components.perishable.onperishreplacement = "spoiled_food"
 
@@ -52,4 +52,4 @@ local function createWatermelonBobo(mc)
 end
 
 -- 
-return createWatermelonBobo("watermelon_bobo")
+return create("watermelon_bo")
