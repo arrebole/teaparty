@@ -60,7 +60,7 @@ local makeFruitSkewers =
 {
 	name = "fruit_skewers",
 	test = function(cooker, names, tags) 
-		return names.twigs and names.jammypreserves == 3
+		return names.twigs and names.berries == 3
 	end,
 	foodtype = FOODTYPE.VEGGIE,
 	perishtime = TUNING.PERISH_FAST / 3, --腐烂时间
@@ -76,5 +76,4 @@ local makeFruitSkewers =
 	cookbook_category = "cookpot",
 	oneat_desc = "无",
 }
-AddIngredientValues({ "jammypreserves" }, { fruit = 2 }, true)
 AddCookerRecipe("cookpot", makeFruitSkewers)
