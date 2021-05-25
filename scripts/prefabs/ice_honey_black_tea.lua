@@ -34,7 +34,7 @@ local function create(mc)
 
         -- 腐烂
         inst:AddComponent("perishable")
-	    inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST / 3)
+	    inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST / 2)
 	    inst.components.perishable:StartPerishing()
 	    inst.components.perishable.onperishreplacement = "spoiled_food"
 

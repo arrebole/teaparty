@@ -15,7 +15,7 @@ local makeIceHoneyBlackTea =
 		return names.robin and names.ice == 2 and names.honey 
 	end,
 	foodtype = FOODTYPE.VEGGIE,
-	perishtime = TUNING.PERISH_FAST / 3, --腐烂时间
+	perishtime = TUNING.PERISH_FAST / 2, --腐烂时间
 	priority = 100,
 	hunger = 0,
 	sanity = 30,
@@ -40,7 +40,7 @@ local makeWatermelonBo =
 		return names.watermelon and names.ice and names.berries_juicy and names.ice_honey_black_tea
 	end,
 	foodtype = FOODTYPE.VEGGIE,
-	perishtime = TUNING.PERISH_FAST / 3, --腐烂时间
+	perishtime = TUNING.PERISH_FAST / 2, --腐烂时间
 	priority = 100,
 	hunger = 0,
 	sanity = 50,
