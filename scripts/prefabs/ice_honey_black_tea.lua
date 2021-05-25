@@ -28,9 +28,9 @@ local function create(mc)
 
         -- 可食用
         inst:AddComponent("edible")
-	    inst.components.edible.healthvalue = 15
-	    inst.components.edible.hungervalue = 15
-	    inst.components.edible.sanityvalue = 15
+	    inst.components.edible.hungervalue = 0
+	    inst.components.edible.sanityvalue = 30
+	    inst.components.edible.healthvalue = 12
 
         -- 腐烂
         inst:AddComponent("perishable")

@@ -17,11 +17,11 @@ local makeIceHoneyBlackTea =
 	foodtype = FOODTYPE.VEGGIE,
 	perishtime = TUNING.PERISH_FAST / 3, --腐烂时间
 	priority = 100,
-	health = 15,
-	hunger = 15,
-	sanity = 15,
+	hunger = 0,
+	sanity = 30,
+	health = 12,
 	weight = 1,
-	cooktime = 0.25,
+	cooktime = 0.75,
 
 	cookbook_tex = "ice_honey_black_tea.tex",
 	cookbook_atlas = "images/inventoryimages/ice_honey_black_tea.xml",
@@ -36,16 +36,16 @@ local makeWatermelonBo =
 {
 	name = "watermelon_bo",
 	test = function(cooker, names, tags) 
-		return names.watermelon and names.ice and names.honey and names.ice_honey_black_tea
+		return names.watermelon and names.ice and names.berries_juicy and names.ice_honey_black_tea
 	end,
 	foodtype = FOODTYPE.VEGGIE,
 	perishtime = TUNING.PERISH_FAST / 3, --腐烂时间
 	priority = 100,
-	health = 10,
-	hunger = 10,
-	sanity = 30,
+	hunger = 0,
+	sanity = 50,
+	health = 25,
 	weight = 1,
-	cooktime = 0.25,
+	cooktime = 0.75,
 
 	cookbook_tex = "watermelon_bo.tex",
 	cookbook_atlas = "images/inventoryimages/watermelon_bo.xml",
@@ -65,11 +65,11 @@ local makeFruitSkewers =
 	foodtype = FOODTYPE.VEGGIE,
 	perishtime = TUNING.PERISH_FAST / 3, --腐烂时间
 	priority = 100,
-	hunger = 10,
-	health = 20,
+	hunger = 20,
 	sanity = 20,
+	health = 10,
 	weight = 1,
-	cooktime = 0.25,
+	cooktime = 0.75,
 
 	cookbook_tex = "fruit_skewers.tex",
 	cookbook_atlas = "images/inventoryimages/fruit_skewers.xml",
