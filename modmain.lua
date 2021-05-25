@@ -30,6 +30,7 @@ local makeIceHoneyBlackTea =
 
 AddIngredientValues({ "robin" }, { meat = 1 }, true)
 AddCookerRecipe("cookpot", makeIceHoneyBlackTea)
+AddCookerRecipe("portablecookpot", makeIceHoneyBlackTea)
 
 -- 注册西瓜啵制作方式
 local makeWatermelonBo =
@@ -54,6 +55,7 @@ local makeWatermelonBo =
 }
 AddIngredientValues({ "ice_honey_black_tea" }, { fruit = 1 }, true)
 AddCookerRecipe("cookpot", makeWatermelonBo)
+AddCookerRecipe("portablecookpot", makeWatermelonBo)
 
 -- 注册果串零食制作方式
 local makeFruitSkewers =
@@ -77,3 +79,4 @@ local makeFruitSkewers =
 	oneat_desc = "无",
 }
 AddCookerRecipe("cookpot", makeFruitSkewers)
+AddCookerRecipe("portablecookpot", makeFruitSkewers)
