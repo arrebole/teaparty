@@ -3,7 +3,7 @@
 name = "茶会"
 description = "饥荒茶会模组"
 author = "arrebole、小無"
-version = "0.2.4"
+version = "0.2.5"
 forumthread = "/"
 
 icon_atlas = "modicon.xml"
