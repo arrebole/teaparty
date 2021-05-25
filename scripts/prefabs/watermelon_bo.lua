@@ -19,7 +19,7 @@ local function create(mc)
 	
         inst.AnimState:SetBuild(mc)
         inst.AnimState:SetBank("entity_" .. mc)
-        inst.Transform:SetScale(1.2, 1.2, 1.2)
+        inst.Transform:SetScale(0.9, 0.9, 0.9)
         inst.AnimState:PlayAnimation("idle")
 
         -- 可食用

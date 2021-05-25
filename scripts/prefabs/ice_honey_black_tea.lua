@@ -23,7 +23,7 @@ local function create(mc)
         -- 动画合集名(entity)对应着bank
         inst.AnimState:SetBank("entity_" .. mc)
         -- 动画名对应着Animation
-        inst.Transform:SetScale(1.2, 1.2, 1.2)
+        inst.Transform:SetScale(0.9, 0.9, 0.9)
         inst.AnimState:PlayAnimation("idle")
 
         -- 可食用
