@@ -23,6 +23,7 @@ local function create(mc)
         -- 动画合集名(entity)对应着bank
         inst.AnimState:SetBank("entity_" .. mc)
         -- 动画名对应着Animation
+        inst.Transform:SetScale(1.2, 1.2, 1.2)
         inst.AnimState:PlayAnimation("idle")
 
         -- 可食用
@@ -33,7 +34,7 @@ local function create(mc)
 
         -- 腐烂
         inst:AddComponent("perishable")
-	    inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST / 4)
+	    inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST / 3)
 	    inst.components.perishable:StartPerishing()
 	    inst.components.perishable.onperishreplacement = "spoiled_food"
 
@@ -47,14 +48,6 @@ local function create(mc)
         -- 库存项目
         inst:AddComponent("inventoryitem")
         inst.components.inventoryitem.atlasname = "images/inventoryimages/" .. mc .. ".xml"
-
-        -- 食用效果
-        inst.components.edible:SetOnEatenFn(function (inst, eater)
-            eater.components.locomotor:SetExternalSpeedMultiplier(eater, mc .. "buff", 1.80)
-            eater:DoTaskInTime(30, function()
-                eater.components.locomotor:RemoveExternalSpeedMultiplier(eater,  mc .. "buff")
-            end)
-        end)
 
         return inst
     end,

@@ -2,9 +2,12 @@
 
 name = "茶会"
 description = "饥荒茶会模组"
-author = "arrebole"
+author = "arrebole、小無"
 version = "0.2.0"
 forumthread = "/"
+
+icon_atlas = "modicon.xml"
+icon = "modicon.tex"
 
 api_version = 10
 
