@@ -24,7 +24,7 @@ local function create(mc)
 
         -- 可食用
         inst:AddComponent("edible")
-        inst:AddTag("preparefood") --厨师可食用
+        inst:AddTag("preparedfood") --厨师可食用
 	    inst.components.edible.hungervalue = 20
 	    inst.components.edible.sanityvalue = 20
 	    inst.components.edible.healthvalue = 10
