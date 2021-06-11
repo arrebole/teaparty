@@ -80,3 +80,5 @@ local makeFruitSkewers =
 }
 AddCookerRecipe("cookpot", makeFruitSkewers)
 AddCookerRecipe("portablecookpot", makeFruitSkewers)
+
+require("tp_strings")

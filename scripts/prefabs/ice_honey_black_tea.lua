@@ -1,11 +1,5 @@
 -- 
 local function create(mc)
-	STRINGS.NAMES[string.upper(mc)] = "冰蜜红茶"
-
-    STRINGS.CHARACTERS.WILLOW.DESCRIBE[string.upper(mc)] = "ohhh~"
-    STRINGS.CHARACTERS.WOLFGANG.DESCRIBE[string.upper(mc)] = "ohhh~"
-    STRINGS.CHARACTERS.WENDY.DESCRIBE[string.upper(mc)] = "ohhh~"
-
     return Prefab(mc, function()
         local inst = CreateEntity()
         inst.entity:AddTransform()
