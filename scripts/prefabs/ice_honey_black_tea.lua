@@ -11,11 +11,13 @@ local function create(mc)
         end	
 
         MakeInventoryPhysics(inst)
-        
+
+        -- 动画合集名(entity)对应着bank
+        inst.AnimState:SetBank(mc)
+
         --  scml的文件名对应
         inst.AnimState:SetBuild(mc)
-        -- 动画合集名(entity)对应着bank
-        inst.AnimState:SetBank("entity_" .. mc)
+
         -- 动画名对应着Animation
         inst.AnimState:PlayAnimation("idle")
 

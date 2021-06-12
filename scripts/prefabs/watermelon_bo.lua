@@ -12,8 +12,8 @@ local function create(mc)
 
         MakeInventoryPhysics(inst)
 	
+        inst.AnimState:SetBank(mc)
         inst.AnimState:SetBuild(mc)
-        inst.AnimState:SetBank("entity_" .. mc)
         inst.AnimState:PlayAnimation("idle")
 
         -- 可食用

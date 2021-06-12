@@ -3,7 +3,7 @@
     <folder id="0" name="ice_honey_black_tea">
         <file id="0" name="ice_honey_black_tea/tp.png" width="256" height="256" pivot_x="0.46561" pivot_y="0.413358"/>
     </folder>
-    <entity id="0" name="entity_ice_honey_black_tea">
+    <entity id="0" name="ice_honey_black_tea">
         <animation id="0" name="idle" length="1000">
             <mainline>
                 <key id="0">

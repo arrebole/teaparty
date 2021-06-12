@@ -3,7 +3,7 @@
     <folder id="0" name="watermelon_bo">
         <file id="0" name="watermelon_bo/tp.png" width="256" height="256" pivot_x="0.51562" pivot_y="0.400878"/>
     </folder>
-    <entity id="0" name="entity_watermelon_bo">
+    <entity id="0" name="watermelon_bo">
         <animation id="0" name="idle" length="1000">
             <mainline>
                 <key id="0">

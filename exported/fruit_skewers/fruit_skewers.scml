@@ -3,7 +3,7 @@
     <folder id="0" name="fruit_skewers">
         <file id="0" name="fruit_skewers/tp.png" width="256" height="256" pivot_x="0.526317" pivot_y="0.472953"/>
     </folder>
-    <entity id="0" name="entity_fruit_skewers">
+    <entity id="0" name="fruit_skewers">
         <animation id="0" name="idle" length="1000">
             <mainline>
                 <key id="0">
