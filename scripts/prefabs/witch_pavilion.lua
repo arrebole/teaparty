@@ -42,7 +42,8 @@ local function create(mc)
         inst.entity:AddTransform()
         inst.entity:AddAnimState()
         inst.entity:AddNetwork()
-    
+
+        -- 建筑物标签
         inst:AddTag("structure")
     
         inst.AnimState:SetBank( mc)
@@ -58,13 +59,17 @@ local function create(mc)
         -- 可以被检查
         inst:AddComponent("inspectable")
 
-        -- 可以被存放对象
+        -- 可以存放物品
         inst:AddComponent("container")
         inst.components.container:WidgetSetup(createContainer(mc))
         inst.components.container.onopenfn = onopen
         inst.components.container.onclosefn = onclose
         inst.components.container.skipclosesnd = true
         inst.components.container.skipopensnd = true
+
+        -- 设置存放物品防腐烂保险 -> 永久保险
+        inst:AddComponent("preserver")
+        inst.components.preserver:SetPerishRateMultiplier(0)
 
         return inst
     end,
